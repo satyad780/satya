@@ -1,0 +1,216 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General Body Styling */
+body {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff6a00);  /* Bold gradient for energy */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;  /* Smooth dynamic background animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container to center the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Box (form container) styling */
+.box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);  /* Subtle background blur */
+}
+
+/* Header Styling with Bold Gradient and Glow */
+.signup-header h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4f4f4f;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);  /* Bold gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);  /* Glow effect for text */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input focus styling */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff7e5f;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 15px rgba(255, 126, 95, 0.6);
+    transform: scale(1.03);
+}
+
+/* Button Styling with Fancy Hover Effects */
+button {
+    padding: 16px 28px;
+    font-size: 18px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #feb47b;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 126, 95, 0.5);
+}
+
+/* Button ripple animation */
+button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ff7e5f;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Error message styling */
+span {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.signup-footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.signup-footer a {
+    color: #ff7e5f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Step container for step-based forms */
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+/* Additional hover effects for step navigation buttons */
+button[type="button"] {
+    background-color: #3498db;
+    margin-top: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="button"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Final Review Section */
+.review-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Final Confirmation Button */
+#finalSubmit {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#finalSubmit:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+

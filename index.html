@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <header class="signup-header">
+                <h1>Signup</h1>
+            </header>
+            <main class="signup-body">
+                <form action="#" id="signupForm">
+                    <!-- Step 1: User Info -->
+                    <div class="step step-1 active">
+                        <p>
+                            <label for="name">Full Name</label>
+                            <input type="text" placeholder="Type Name Here" id="name" />
+                            <span id="nameError"></span>
+                        </p>
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="xyz@gmail.com" id="email" />
+                            <span id="emailError"></span>
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input type="password" placeholder="at least 8 characters" id="password" />
+                            <span id="passError"></span>
+                            <div class="password-strength"></div>
+                        </p>
+                        <p>
+                            <button type="button" id="nextBtn">Next</button>
+                        </p>
+                    </div>
+
+                    <!-- Step 2: Review Info -->
+                    <div class="step step-2">
+                        <h2>Review Your Information</h2>
+                        <div id="reviewName"></div>
+                        <div id="reviewEmail"></div>
+                        <div id="reviewPassword"></div>
+
+                        <button type="button" id="editBtn">Edit</button>
+                        <button type="submit" id="submitBtn">Submit</button>
+                    </div>
+                </form>
+            </main>
+            <footer class="signup-footer">
+                <p>Already have an account? <a href="#">Login</a></p>
+            </footer>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
